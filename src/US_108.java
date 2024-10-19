@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class US_108 extends BaseDriver {
+
     String emailStr = "sefakahraman0001@gmail.com";
     String passwordStr = "Earnq123**";
     String invalidPasswordStr = "Earnq123";
@@ -17,7 +18,7 @@ public class US_108 extends BaseDriver {
     String[] keyWordStr = {"laptop", "notebook", "macbook"};
 
     @Test
-    public void successfulLogin() {
+    public void test() {
         driver.get("https://www.akakce.com/");
         MyFunc.Wait(1);
 
@@ -39,11 +40,11 @@ public class US_108 extends BaseDriver {
         WebElement loginControl = driver.findElement(By.xpath("(//a[@rel='nofollow'])[1]"));
         Assert.assertTrue("Giriş başarısız", loginControl.getText().contains("Sefa"));
 
-        driver.close();
+        tearDown();
     }
 
     @Test
-    public void invalidPassword() {
+    public void test2() {
         driver.get("https://www.akakce.com/");
         MyFunc.Wait(1);
 
@@ -70,11 +71,11 @@ public class US_108 extends BaseDriver {
         okBtn.click();
         MyFunc.Wait(1);
 
-        driver.close();
+        tearDown();
     }
 
     @Test
-    public void invalidEmail() {
+    public void test3() {
         driver.get("https://www.akakce.com/");
         MyFunc.Wait(1);
 
@@ -101,11 +102,11 @@ public class US_108 extends BaseDriver {
         okBtn.click();
         MyFunc.Wait(1);
 
-        driver.close();
+        tearDown();
     }
 
     @Test
-    public void nullEmailAndPassword() {
+    public void test4() {
         driver.get("https://www.akakce.com/");
         MyFunc.Wait(1);
 
@@ -132,11 +133,11 @@ public class US_108 extends BaseDriver {
         okBtn.click();
         MyFunc.Wait(1);
 
-        driver.close();
+        tearDown();
     }
 
     @Test
-    public void nullEmailAndPassword2() {
+    public void test5() {
         driver.get("https://www.akakce.com/");
         MyFunc.Wait(1);
 
@@ -163,11 +164,11 @@ public class US_108 extends BaseDriver {
         okBtn.click();
         MyFunc.Wait(1);
 
-        driver.close();
+        tearDown();
     }
 
     @Test
-    public void passwordNull() {
+    public void test6() {
         driver.get("https://www.akakce.com/");
         MyFunc.Wait(1);
 
@@ -194,11 +195,11 @@ public class US_108 extends BaseDriver {
         okBtn.click();
         MyFunc.Wait(1);
 
-        driver.close();
+        tearDown();
     }
 
     @Test
-    public void emailNull() {
+    public void test7() {
         driver.get("https://www.akakce.com/");
         MyFunc.Wait(1);
 
@@ -225,11 +226,11 @@ public class US_108 extends BaseDriver {
         okBtn.click();
         MyFunc.Wait(1);
 
-        driver.quit();
+        tearDown();
     }
 
     @Test
-    public void searchBoxTest() {
+    public void test8() {
         driver.get("https://www.akakce.com/");
         MyFunc.Wait(1);
 
@@ -281,11 +282,11 @@ public class US_108 extends BaseDriver {
 
         System.out.println("count = " + count);
 
-        driver.close();
+        tearDown();
     }
 
     @Test
-    public void footerMenu() {
+    public void test9() {
         driver.navigate().to("https://www.akakce.com/");
         MyFunc.Wait(1);
 
@@ -327,6 +328,6 @@ public class US_108 extends BaseDriver {
             MyFunc.Wait(1);
         }
 
-        driver.quit();
+        tearDown();
     }
 }
